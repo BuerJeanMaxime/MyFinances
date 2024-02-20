@@ -57,7 +57,7 @@
                     <a class="btn btn-sm btn-accent me-8"
                        href="{% url "invoices dashboard manage_access" id=invoice.id %}">Share Invoice</a>
                     <div class="flex items-center">
-                        <button onclick="document.getElementById('status_banner').remove();"
+                        <button hx-delete="#status_banner"
                                 type="button"
                                 class="flex-shrink-0 inline-flex justify-center w-7 h-7 items-center rounded-lg text-sm p-1.5 hover:bg-gray-600 hover:text-white">
                             <i class="fa-solid fa-xmark"></i>
