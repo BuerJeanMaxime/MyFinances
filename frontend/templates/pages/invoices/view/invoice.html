@@ -55,7 +55,10 @@
                         Print
                     </button>
                     <a class="btn btn-sm btn-accent me-8"
-                       href="{% url 'invoices dashboard manage_access' id=invoice.id %}">Share Invoice</a>
+                        href="{% url 'invoices dashboard manage_access' id=invoice.id %}"
+                        hx-get="{% url 'invoices dashboard manage_access' id=invoice.id %}"
+                        hx-trigger="click"
+                        hx-swap="outerHTML">Share Invoice</a>
                     <div class="flex items-center">
                         <button hx-delete="#status_banner"
                                 type="button"
